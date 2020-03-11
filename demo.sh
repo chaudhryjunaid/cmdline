@@ -25,9 +25,8 @@ ls || pwd # run second command if first fails
 
 # p9
 # a. each program does one thing well
-sort sonnets.txt
-uniq sonnets.txt
-split sonnets.txt
+sort numbers.txt
+uniq numbers.txt
 fold -w30 sonnets.txt
 grep thou sonnets.txt
 
@@ -36,15 +35,18 @@ ls -l /dev
 ls /dev/disk<TAB>
 ls /dev/std<TAB>
 ls /dev/tty<TAB>
-cat /dev/zero | tr "\0" 0
-cat /dev/random
+head -30 /dev/zero | tr "\0" 0
+head -30 /dev/urandom
+hexdump -C -n200 /dev/urandom
+LC_ALL=C tr -cd 'A-Za-z0-0' </dev/urandom
+
 
  # p10
  cat <names.txt
  cat names.txt >names2.txt
  cat names.txt >>names2.txt
  cat no-exist.txt >ne.txt
- cat no-exist.txt 2>&1 >ne.txt
+ cat no-exist.txt >ne.txt 2>&1
  cat ne.txt
 
  # p11
