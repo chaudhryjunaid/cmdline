@@ -124,11 +124,11 @@ echo 'Hostname is: $(hostname -s)'
 echo $USER
 echo $SHELL
 echo $UID $GID
-$DATE=$(date)
+DATE=$(date)
 echo $DATE
-./printmyenv
+./printmyenv.sh
 export NODE_ENV=development
-./printmyenv
+./printmyenv.sh
 
 # p24
 sudo su
